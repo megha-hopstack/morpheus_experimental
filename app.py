@@ -93,7 +93,7 @@ def main():
     # Perform Agglomerative Clustering
     agg = AgglomerativeClustering(
         n_clusters=k,
-        affinity="precomputed",
+        metric="precomputed",  # Use 'metric' instead of 'affinity'
         linkage="average"
     )
     labels = agg.fit_predict(distance_matrix)
